@@ -13,8 +13,8 @@ url = base_url + "&APPID=" + api_key
 
 # make the http request
 print("request " + url)
-# proxy = {"http": "http://p-goodway.rd.francetelecom.fr:3128"}
-# r = session.get(url, proxies=proxy)
+proxy = {"http": "http://p-goodway.rd.francetelecom.fr:3128"}
+r = session.get(url, proxies=proxy)
 r = session.get(url)
 print("response = " + r.text)
 
