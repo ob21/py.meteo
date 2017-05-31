@@ -11,11 +11,11 @@ base_url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&lang=fr&un
 # build the url
 url = base_url + "&APPID=" + api_key
 
-# make the http request
+# make the http request to openweathermap
 print("request " + url)
 proxy = {"http": "http://p-goodway.rd.francetelecom.fr:3128"}
 r = session.get(url, proxies=proxy)
-r = session.get(url)
+# r = session.get(url)
 print("response = " + r.text)
 
 # parse the json and get the data
@@ -46,6 +46,7 @@ print()
 data = {'city': city, 'main': main, 'description': description, 'temp': temp, 'pressure': pressure, 'humidity': humidity, 'temp_min': temp_min, 'temp_max': temp_max, 'wind_speed': wind_speed}
 dataUrl = "http://obriand.fr/meteo/add.php"
 print("request post data = " + dataUrl + " with " + str(data))
-r = session.post(dataUrl, data=data)
+r = session.post(dataUrl, data=data, proxies=proxy)
+# r = session.post(dataUrl, data=data)
 print("response data = " + r.text)
 
