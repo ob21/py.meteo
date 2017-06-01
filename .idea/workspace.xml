@@ -21,8 +21,8 @@
       <file leaf-file-name="meteo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meteo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -264,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496245004556</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="manage a list of cities to get meteo">
+      <created>1496305124596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496305124596</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -333,7 +340,8 @@
     <MESSAGE value="add meteo.py" />
     <MESSAGE value="integrate meteo.py into project" />
     <MESSAGE value="activate proxy in requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="activate proxy in requests" />
+    <MESSAGE value="manage a list of cities to get meteo" />
+    <option name="LAST_COMMIT_MESSAGE" value="manage a list of cities to get meteo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -375,8 +383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meteo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
           <folding />
         </state>
       </provider>

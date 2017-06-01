@@ -16,17 +16,19 @@ def getMeteoFor(c):
 
     # make the http request to openweathermap
     print("request " + url)
-    proxy = {"http": "http://p-goodway.rd.francetelecom.fr:3128"}
-    r = session.get(url, proxies=proxy)
-    # r = session.get(url)
+    # proxy = {"http": "http://p-goodway.rd.francetelecom.fr:3128"}
+    # r = session.get(url, proxies=proxy)
+    r = session.get(url)
     print("response = " + r.text)
 
     # parse the json and get the data
     data = json.loads(r.text);
     print()
     city = data['name']
+    code = data['weather'][0]['id']
     main = data['weather'][0]['main']
     description = data['weather'][0]['description']
+    icon = data['weather'][0]['icon']
     temp = data['main']['temp']
     pressure = data['main']['pressure']
     temp_min = data['main']['temp_min']
@@ -34,7 +36,9 @@ def getMeteoFor(c):
     humidity = data['main']['humidity']
     wind_speed = data['wind']['speed'];
 
-    print("Météo de " + c + " : ");
+    print("Meteo de " + c + " : ");
+    print(code);
+    print(icon);
     print(main);
     print(description);
     print("temp = " + str(temp));
@@ -46,11 +50,11 @@ def getMeteoFor(c):
 
     # create a entry on the obriand bdd
     print()
-    data = {'city': city, 'main': main, 'description': description, 'temp': temp, 'pressure': pressure, 'humidity': humidity, 'temp_min': temp_min, 'temp_max': temp_max, 'wind_speed': wind_speed}
+    data = {'city': city, 'code': code, 'icon': icon, 'main': main, 'description': description, 'temp': temp, 'pressure': pressure, 'humidity': humidity, 'temp_min': temp_min, 'temp_max': temp_max, 'wind_speed': wind_speed}
     dataUrl = "http://obriand.fr/meteo/add.php"
     print("request post data = " + dataUrl + " with " + str(data))
-    r = session.post(dataUrl, data=data, proxies=proxy)
-    # r = session.post(dataUrl, data=data)
+    # r = session.post(dataUrl, data=data, proxies=proxy)
+    r = session.post(dataUrl, data=data)
     print("response data = " + r.text)
     print()
 
