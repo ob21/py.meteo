@@ -18,7 +18,7 @@ def getCities():
     print("request " + url)
     # proxy = {"http": "http://p-goodway.rd.francetelecom.fr:3128"}
     # r = session.get(url, proxies=proxy)
-    r = session.get(url)
+    r = session.get(url, verify=False)
     print("response = " + r.text)
     global cities
     cities = r.text.split(",")
